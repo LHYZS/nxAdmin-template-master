@@ -1,26 +1,17 @@
 <template>
   <div class="app-container">
-   <nx-github-corner></nx-github-corner>
     <div class="item">
-      <h4>在線人數</h4>
+      <h4>在线人数</h4>
       <nx-data-display :option="option"></nx-data-display>
     </div>
     <div class="item">
-      <h4>熱門課程</h4>
+      <h4>热门课程</h4>
       <nx-data-tabs :option="easyDataOption"></nx-data-tabs>
     </div>
     <div class="item">
-      <h4>熱門教師</h4>
+      <h4>热门教师</h4>
       <nx-data-card :option="easyDataOption0"></nx-data-card>
     </div>
-    <!--<div class="item">-->
-      <!--<h4>带数字的展示</h4>-->
-      <!--<nx-data-icons :option="easyDataOption1"></nx-data-icons>-->
-    <!--</div>-->
-    <!--<div class="item">-->
-      <!--<h4>简易展示</h4>-->
-      <!--<nx-data-icons :option="easyDataOption2"></nx-data-icons>-->
-    <!--</div>-->
   </div>
 </template>
 
@@ -29,16 +20,12 @@
 import nxDataDisplay from '@/components/nx-data-display/nx-data-display'
 import nxDataCard from '@/components/nx-data-card/nx-data-card'
 import nxDataTabs from '@/components/nx-data-tabs/nx-data-tabs'
-import nxDataIcons from '@/components/nx-data-icons/nx-data-icons'
-import nxGithubCorner from '@/components/nx-github-corner'
 export default {
   name: 'report',
   components: {
     nxDataDisplay,
     nxDataCard,
-    nxDataTabs,
-    nxDataIcons,
-    nxGithubCorner
+    nxDataTabs
 
   },
   data() {
@@ -49,15 +36,15 @@ export default {
         data: [
           {
             count: 100,
-            title: '日活跃数'
+            title: '日在线数'
           },
           {
             count: 3500,
-            title: '月活跃数'
+            title: '月在线数'
           },
           {
             count: 42000,
-            title: '年活跃数'
+            title: '年在线数'
           }
         ]
       },
@@ -65,38 +52,38 @@ export default {
         span: 6,
         data: [
           {
-            title: '分类统计',
+            title: '软件工程',
             subtitle: '实时',
-            count: 7993,
-            allcount: 10222,
-            text: '当前分类总记录数',
+            count: 79,
+            allcount: 100,
+            text: '已选报人数',
             color: 'rgb(49, 180, 141)',
             key: '类'
           },
           {
-            title: '附件统计',
+            title: '高等数学',
             subtitle: '实时',
-            count: 3112,
-            allcount: 10222,
-            text: '当前上传的附件数',
+            count: 31,
+            allcount: 50,
+            text: '已选报人数',
             color: 'rgb(56, 161, 242)',
             key: '附'
           },
           {
-            title: '文章统计',
+            title: '线性代数',
             subtitle: '实时',
-            count: 908,
-            allcount: 10222,
-            text: '评论次数',
+            count: 90,
+            allcount: 102,
+            text: '已选报人数',
             color: 'rgb(117, 56, 199)',
             key: '评'
           },
           {
-            title: '新闻统计',
+            title: '军事理论',
             subtitle: '实时',
-            count: 908,
-            allcount: 10222,
-            text: '评论次数',
+            count: 90,
+            allcount: 110,
+            text: '已选报人数',
             color: 'rgb(59, 103, 164)',
             key: '新'
           }
@@ -107,97 +94,24 @@ export default {
         borderColor: '#fff',
         data: [
           {
-            name: '姓名1',
+            name: '王益答教师',
             src: 'static/img/mock/card/card-1.jpg',
-            text: '介绍1'
+            text: '教授高等数学，教学风格幽默风趣'
           },
           {
-            name: '姓名2',
+            name: '李晓迪教授',
             src: 'static/img/mock/card/card-2.jpg',
-            text: '介绍2'
+            text: '教授软件工程，知识渊博，有问必答'
           },
           {
-            name: '姓名3',
+            name: '史莱克教师',
             src: 'static/img/mock/card/card-3.jpg',
-            text: '介绍3'
+            text: '教授大学英语，基础扎实，沉着稳健'
           },
           {
-            name: '姓名4',
+            name: '乐嘉',
             src: 'static/img/mock/card/card-4.jpg',
-            text: '介绍4'
-          }
-        ]
-      },
-      easyDataOption1: {
-        color: 'rgb(63, 161, 255)',
-        span: 4,
-        data: [
-          {
-            title: '今日注册',
-            count: 12678,
-            icon: 'icon-cuowu'
-          },
-          {
-            title: '今日登录',
-            count: 22139,
-            icon: 'icon-shujuzhanshi2'
-          },
-          {
-            title: '今日订阅',
-            count: 35623,
-            icon: 'icon-jiaoseguanli'
-          },
-          {
-            title: '今日评论',
-            count: 16826,
-            icon: 'icon-caidanguanli'
-          },
-          {
-            title: '今日评论',
-            count: 16826,
-            icon: 'icon-caidanguanli'
-          },
-          {
-            title: '今日评论',
-            count: 16826,
-            icon: 'icon-caidanguanli'
-          }
-        ]
-      },
-      easyDataOption2: {
-        color: 'rgb(63, 161, 255)',
-        span: 4,
-        discount: true,
-        data: [
-          {
-            title: '错误日志',
-            count: 12678,
-            icon: 'icon-cuowu'
-          },
-          {
-            title: '数据展示',
-            count: 12678,
-            icon: 'icon-shujuzhanshi2'
-          },
-          {
-            title: '权限管理',
-            count: 12678,
-            icon: 'icon-jiaoseguanli'
-          },
-          {
-            title: '菜单管理',
-            count: 12678,
-            icon: 'icon-caidanguanli'
-          },
-          {
-            title: '权限测试',
-            count: 12678,
-            icon: 'icon-caidanguanli'
-          },
-          {
-            title: '错误页面',
-            count: 12678,
-            icon: 'icon-caidanguanli'
+            text: '教授心理学，探知人性的另一面'
           }
         ]
       }
@@ -218,6 +132,5 @@ export default {
 <style lang ="scss">
     @import '../../styles/data-card.scss';
     @import '../../styles/data-display.scss';
-    @import '../../styles/data-icons.scss';
     @import '../../styles/data-tabs.scss';
 </style>

@@ -1,9 +1,9 @@
 <template>
   <div class="login-container pull-height" @keyup.enter.native="handleLogin">
     <div class="login-info text-white animated fadeInLeft">
-      <div class="logo" style="margin-top:-426px">
-          <img src="../../assets/images/home/logo.png" width="160px" height="160px" alt="logo" style="vertical-align: middle;" />
-      </div>
+      <!--<div class="logo" style="margin-top:-426px">-->
+          <!--<img src="../../assets/images/home/logo.png" width="160px" height="160px" alt="logo" style="vertical-align: middle;" />-->
+      <!--</div>-->
       <h2 class="login-info-title">{{website.info.title}}</h2>
       <ul class="login-info-list">
         <li class="login-info-item" v-for="item in website.info.list">
@@ -19,9 +19,9 @@
           <el-tab-pane label="用户密码" name="user">
             <userLogin></userLogin>
           </el-tab-pane>
-          <el-tab-pane label="短信验证码" name="code">
-            <codeLogin></codeLogin>
-          </el-tab-pane>
+          <!--<el-tab-pane label="短信验证码" name="code">-->
+            <!--<codeLogin></codeLogin>-->
+          <!--</el-tab-pane>-->
         </el-tabs>
       </div>
     </div>
@@ -30,13 +30,13 @@
 </template>
 <script>
 import userLogin from './userlogin'
-import codeLogin from './codelogin'
+// import codeLogin from './codelogin'
 import { mapGetters } from 'vuex'
 export default {
   name: 'login',
   components: {
-    userLogin,
-    codeLogin
+    userLogin
+    // codeLogin
   },
   data() {
     return {

@@ -12,9 +12,9 @@ export const constantRouterMap = [
     component: Layout,
     redirect: '/dashboard/dashboard'
   },
-  { path: '/login', component: () => import('@/views/login'), name: '登录NxAdmin', hidden: true },
-  { path: '/404', component: () => import('@/views/errorPage/404'), hidden: true },
-  { path: '/401', component: () => import('@/views/errorPage/401'), hidden: true },
+  { path: '/login', component: () => import('@/views/login'), name: '登录', hidden: true },
+  // { path: '/404', component: () => import('@/views/errorPage/404'), hidden: true },
+  // { path: '/401', component: () => import('@/views/errorPage/401'), hidden: true },
 
   // 报表
   {
@@ -26,42 +26,10 @@ export const constantRouterMap = [
         path: 'dashboard',
         name: 'dashboard',
         component: () => import('@/views/dashboard/dashboard'),
-        meta: { title: 'dashboard', icon: 'dashboard' }
+        meta: { title: '首页', icon: 'dashboard' }
       }
     ]
   },
-
-  // 表单
-  // {
-  //   path: '/form',
-  //   component: Layout,
-  //   redirect: '/table/BaseForm',
-  //   name: 'form',
-  //   meta: {
-  //     title: 'form',
-  //     icon: 'form'
-  //   },
-  //   children: [
-  //     {
-  //       path: 'BaseForm',
-  //       name: 'BaseForm',
-  //       component: () => import('@/views/form/BaseForm'),
-  //       meta: { title: 'BaseForm' }
-  //     },
-  //     {
-  //       path: 'VueEditor',
-  //       name: 'VueEditor',
-  //       component: () => import('@/views/form/VueEditor'),
-  //       meta: { title: 'VueEditor' }
-  //     },
-  //     {
-  //       path: 'Upload',
-  //       name: 'Upload',
-  //       component: () => import('@/views/form/Upload'),
-  //       meta: { title: 'Upload' }
-  //     }
-  //   ]
-  // },
 
   // 表格
   {
@@ -70,7 +38,7 @@ export const constantRouterMap = [
     redirect: '/table/complex-table',
     name: 'table',
     meta: {
-      title: 'Table',
+      title: '课程管理',
       icon: 'table'
     },
     children: [
@@ -78,13 +46,13 @@ export const constantRouterMap = [
         path: 'complex-table',
         name: 'complex-table',
         component: () => import('@/views/table/complex-table'),
-        meta: { title: 'complexTable' }
+        meta: { title: '在线选课' }
       },
       {
         path: 'TreeTable',
         name: 'TreeTable',
         component: () => import('@/views/table/tree-table/index'),
-        meta: { title: 'treeTable' }
+        meta: { title: '已选课程' }
       }
 
     ]
@@ -93,10 +61,15 @@ export const constantRouterMap = [
 ]
 
 export default new Router({
-  // mode: 'history', //后端支持可开
-  scrollBehavior: () => ({ y: 0 }),
   routes: constantRouterMap
 })
+
+// export default new Router({
+//   // mode: 'history', //后端支持可开
+//   scrollBehavior: () => ({ y: 0 }),
+//   routes: constantRouterMap
+// })
+
 export const asyncRouterMap = [
 
   {
