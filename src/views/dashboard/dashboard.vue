@@ -16,7 +16,6 @@
 </template>
 
 <script>
-
 import nxDataDisplay from '@/components/nx-data-display/nx-data-display'
 import nxDataCard from '@/components/nx-data-card/nx-data-card'
 import nxDataTabs from '@/components/nx-data-tabs/nx-data-tabs'
